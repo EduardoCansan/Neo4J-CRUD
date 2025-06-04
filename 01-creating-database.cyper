@@ -1,0 +1,37 @@
+CREATE
+(eduardo:ESTUDANTE {nome: "Eduardo Cansan", idade: 20, altura: 1.83, peso: 76}),
+(gian:ESTUDANTE {nome: "Giancarlo Brandalise", idade: 21, altura: 1.88, peso: 81}),
+(bruno:ESTUDANTE {nome: "Bruno Ferreira", idade: 20, altura: 1.76, peso: 67}),
+(izabella:ESTUDANTE {nome: "Izabella Altmann", idade: 20, altura: 1.70, peso: 62}),
+
+(unisinos:FACULDADE {nome: "Unisinos"}),
+(pucrs:FACULDADE {nome: "PUCRS"}),
+(fundacao:FACULDADE {nome: "UFCSPA"}),
+
+(cc:CURSO {nome: "Ciência da Computação"}),
+(fisioterapia:CURSO {nome: "Fisioterapia"}),
+(biomedicina:CURSO {nome: "Biomedicina"}),
+
+(gian)-[:AMIGOS]->(eduardo),
+(gian)-[:AMIGOS]->(izabella),
+(bruno)-[:AMIGOS]->(eduardo),
+(izabella)-[:AMIGOS]->(eduardo),
+(gian)-[:AMIGOS]->(bruno),
+(bruno)-[:AMIGOS]->(izabella),
+
+(eduardo)-[:CURSA]->(cc),
+(gian)-[:CURSA]->(cc),
+(bruno)-[:CURSA]->(fisioterapia),
+(izabella)-[:CURSA]->(biomedicina),
+
+(eduardo)-[:FREQUENTA]->(unisinos),
+(gian)-[:FREQUENTA]->(pucrs),
+(bruno)-[:FREQUENTA]->(fundacao),
+(izabella)-[:FREQUENTA]->(fundacao),
+
+(unisinos)-[:OFERECE]->(cc),
+(pucrs)-[:OFERECE]->(cc),
+(pucrs)-[:OFERECE]->(fisioterapia),
+(pucrs)-[:OFERECE]->(biomedicina),
+(fundacao)-[:OFERECE]->(fisioterapia),
+(fundacao)-[:OFERECE]->(biomedicina)
