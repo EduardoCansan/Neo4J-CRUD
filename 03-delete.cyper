@@ -1,0 +1,19 @@
+// Delete everything in the database
+
+MATCH (n) DETACH DELETE n
+ 
+// Gian and Izabella had a fight over the weekend because of a game, so we're going to delete their relationship.
+
+MATCH
+(gian:ESTUDANTE {nome: "Giancarlo"})
+-[amigos:AMIGOS]-
+(izabella:ESTUDANTE {nome: "Izabella Altmann"})
+DELETE amigos;  
+
+// Izabella decided to stop studying Biomedicine and put the course on hold.
+
+MATCH 
+(izabela:ESTUDANTE {nome:"Izabella Altmann"})
+-[cursa:CURSA]- 
+(curso:CURSO{nome:"Biomedicina"})
+DELETE cursa
