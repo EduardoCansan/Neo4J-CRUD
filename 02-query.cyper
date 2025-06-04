@@ -1,0 +1,26 @@
+// Getting all the information
+
+MATCH (n) return n
+
+// We want to see people's height
+
+MATCH (estudante:ESTUDANTE) 
+RETURN estudante.nome, estudante.altura
+
+// For example, let's say I want to build a basketball team, and then I get an idea — how about picking people who are quite tall? That way...
+
+MATCH (estudante:ESTUDANTE) 
+WHERE estudante.altura >= 1.8 
+RETURN estudante.nome, estudante.altura
+
+// Now I want to search for all students whose name is different from... let's see, Bruno.
+
+MATCH (estudante:ESTUDANTE)
+WHERE estudante.nome <>  "Bruno Ferreira" 
+RETURN estudante.nome AS nomes
+
+// Now it's time to get the people who are studying Computer Science.
+
+MATCH (estudante:ESTUDANTE) - [:CURSA] -> (curso:CURSO)
+WHERE curso.nome = "Ciência da Computação"
+RETURN estudante, curso
