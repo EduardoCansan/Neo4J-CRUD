@@ -1,0 +1,10 @@
+// Let’s say Bruno started going to the gym some time ago. After a few months, he weighed himself and BOOM! 
+   He gained muscle mass and his weight increased.
+
+MATCH (bruno:ESTUDANTE {nome: "Bruno Ferreira"})
+SET bruno.peso = 75;
+
+// He also started stretching between workouts and noticed he got taller. So let’s update that too:
+
+MATCH (bruno:ESTUDANTE {nome: "Bruno Ferreira"})
+SET bruno.altura= 1.8;
