@@ -1,0 +1,15 @@
+// Gian and Izabella stopped fighting and made up again — now they have a bidirectional relationship.
+
+MATCH 
+(g:ESTUDANTE {nome:”Giancarlo Brandalise”}), (i:ESTUDANTE {nome:”Izabella Altmann”})
+CREATE 
+(g)-[:AMIGOS]->(i),
+(i)-[:AMIGOS]->(g);
+
+// Izabella reconsidered and decided to start studying Physical Therapy with her friend Bruno.
+
+MATCH 
+(i:ESTUDANTE {nome:"Izabella Altmann"}), (f:CURSO{nome:"Fisioterapia"})
+CREATE 
+(i)-[:CURSA]->(f)
+
