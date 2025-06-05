@@ -1,2 +1,3 @@
 # Neo4J-CRUD
-This repository aims to provide a practical demonstration of how graph databases work, using Neo4j as the core technology. Throughout the project, you’ll find examples of implementing the basic CRUD operations (Create, Read, Update, and Delete), showcasing how data can be efficiently represented and manipulated in a graph structure.
+Also check out the video on YouTube for a brief introduction to graph databases and to learn your first lines of code in Neo4j 
+🎬 [https://youtu.be/FFtlCzl3g7A?si=oTY5-hptysPNhOGq]
